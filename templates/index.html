@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collector</title>
+</head>
+<body>
+    <h1>Оцените степень стресса</h1>
+    <form action="/collect_data" method="post">
+        <label for="age">Введите свой возраст:</label>
+        <input type="number" id="age" name="age" required>
+        <br>
+        <label for="answer_1">Как бы вы оценили свой общий уровень стресса сегодня?</label>
+        <select id="answer_1" name="answer_1" required>
+            <option value="1">1 - Совсем не напряжен</option>
+            <option value="2">2 - Слегка напряжен</option>
+            <option value="3">3 - Умеренно напряжен</option>
+            <option value="4">4 - Очень напряжен</option>
+            <option value="5">5 - Крайне напряжен</option>
+        </select>
+        <br>
+        <label for="answer_2">Как часто за последнюю неделю вы чувствовали себя подавленным своей рабочей нагрузкой или обязанностями?</label>
+        <select id="answer_2" name="answer_2" required>
+            <option value="1">1 - Никогда</option>
+            <option value="2">2 - Редко</option>
+            <option value="3">3 - Иногда</option>
+            <option value="4">4 - Часто</option>
+            <option value="5">5 - Почти всегда</option>
+        </select>
+        <br>
+        <label for="answer_3">В какой степени вы чувствуете, что контролируете свою текущую жизненную ситуацию?</label>
+        <select id="answer_3" name="answer_3" required>
+            <option value="1">1 - Полностью контролируете</option>
+            <option value="2">2 - В основном контролируете</option>
+            <option value="3">3 - Нейтрально</option>
+            <option value="4">4 - Несколько неуправляемо</option>
+            <option value="5">5 - Полностью неуправляемо</option>
+        </select>
+        <br>
+        <label for="answer_4">Как вы думаете, насколько хорошо вы распоряжаетесь своим временем и приоритетами в последнее время?</label>
+        <select id="answer_4" name="answer_4" required>
+            <option value="1">1 - Очень хорошо</option>
+            <option value="2">2 - Хорошо</option>
+            <option value="3">3 - Нейтрально</option>
+            <option value="4">4 - Не очень хорошо</option>
+            <option value="5">5 - Совсем не хорошо</option>
+        </select>
+        <br>
+        <label for="answer_5">Как бы вы оценили уровень своей удовлетворенности работой на данный момент?</label>
+        <select id="answer_5" name="answer_5" required>
+            <option value="1">1 - Очень доволен</option>
+            <option value="2">2 - Удовлетворен</option>
+            <option value="3">3 - Нейтрален</option>
+            <option value="4">4 - Недоволен</option>
+            <option value="5">5 - Очень недоволен</option>
+        </select>
+        <br>
+        <label for="answer_6">Испытываете ли вы трудности с поддержанием здорового баланса между работой и личной жизнью?</label>
+        <select id="answer_6" name="answer_6" required>
+            <option value="1">1 - Не всегда</option>
+            <option value="2">2 - Очень редко</option>
+            <option value="3">3 - Иногда</option>
+            <option value="4">4 - Часто</option>
+            <option value="5">5 - Почти всегда</option>
+        </select>
+        <br>
+        <label for="answer_7">Как часто вам бывает сложно заснуть из-за стресса?</label>
+        <select id="answer_7" name="answer_7" required>
+            <option value="1">1 - Не всегда</option>
+            <option value="2">2 - Очень редко</option>
+            <option value="3">3 - Иногда</option>
+            <option value="4">4 - Часто</option>
+            <option value="5">5 - Почти всегда</option>
+        </select>
+        <br>
+        <label for="answer_8">В какой степени вы чувствуете поддержку друзей, семьи или коллег в преодолении стресса?</label>
+        <select id="answer_8" name="answer_8" required>
+            <option value="1">1 - Очень поддерживается</option>
+            <option value="2">2 - Поддерживается</option>
+            <option value="3">3 - Нейтрально</option>
+            <option value="4">4 - Не очень поддерживается</option>
+            <option value="5">5 - Совсем не поддерживается</option>
+        </select>
+        <br>
+        <label for="answer_9">Как часто вы занимаетесь деятельностью или практиками, помогающими снять стресс (например, физическими упражнениями, медитацией, хобби)?</label>
+        <select id="answer_9" name="answer_9" required>
+            <option value="1">1 - Ежедневно</option>
+            <option value="2">2 - Несколько раз в неделю</option>
+            <option value="3">3 - Еженедельно</option>
+            <option value="4">4 - Редко</option>
+            <option value="5">5 - Никогда</option>
+        </select>
+        <br>
+        <label for="answer_10">Считаете ли вы, что у вас есть эффективные механизмы преодоления стрессовых ситуаций?</label>
+        <select id="answer_10" name="answer_10" required>
+            <option value="1">1 - Полностью согласен</option>
+            <option value="2">2 - Согласен</option>
+            <option value="3">3 - Нейтрально</option>
+            <option value="4">4 - Не согласен</option>
+            <option value="5">5 - Категорически не согласен</option>
+        </select>
+        <br>
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>
